@@ -9,11 +9,11 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                bat 'pip install -r requirements.txt'
-            }
-        }
+      stage('Install Dependencies') {
+    steps {
+        bat '"C:\\Users\\saniy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install -r requirements.txt'
+    }
+}
 
         stage('Run Training Script') {
             steps {
