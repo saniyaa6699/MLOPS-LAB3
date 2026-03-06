@@ -9,17 +9,17 @@ pipeline {
             }
         }
 
-      stage('Install Dependencies') {
-    steps {
-        bat '"C:\\Users\\saniy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install -r requirements.txt'
-    }
-}
+        stage('Install Dependencies') {
+            steps {
+                bat '"C:\\Users\\saniy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install -r requirements.txt'
+            }
+        }
 
-       stage('Run Training Script') {
-    steps {
-        bat '"C:\\Users\\saniy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" src\\train.py'
-    }
-}
+        stage('Run Training Script') {
+            steps {
+                bat '"C:\\Users\\saniy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" src\\train.py'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
@@ -35,5 +35,3 @@ pipeline {
 
     }
 }
-
-
