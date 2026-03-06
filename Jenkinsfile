@@ -15,11 +15,11 @@ pipeline {
     }
 }
 
-        stage('Run Training Script') {
-            steps {
-                bat 'python src/train.py'
-            }
-        }
+       stage('Run Training Script') {
+    steps {
+        bat '"C:\\Users\\saniy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" src\\train.py'
+    }
+}
 
         stage('Build Docker Image') {
             steps {
@@ -35,4 +35,5 @@ pipeline {
 
     }
 }
+
 
